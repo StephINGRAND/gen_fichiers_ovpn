@@ -74,7 +74,9 @@ def gen_fichier_ovpn():
                     texte = texte.replace(var1, dico[var1])
                 fichier2.write(texte)
                 fichier2.close
-                   
+                fichier1.close
+
+    csvfile.close
     
 gen_fichier_csv()
 gen_fichier_ovpn()
