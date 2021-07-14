@@ -1,20 +1,20 @@
 # gen_fichiers_ovpn
- Gé©nérateur de fichiers clients .ovpn en masse
+ Générateur de fichiers clients .ovpn en masse
 
 
-Ce script permet de generer en masse des fichiers .ovpn pour un deploiement en urgence de connexions vpn.
+Ce script permet de générer en masse des fichiers .ovpn pour un déploiement en urgence de connexions vpn vers un serveur OpenVpn.
 
 
 
-Prerequis:
+Préréquis:
 
-Les certificats sur le serveur OpenVpn doivent etre generes avec l'option nopass. Le fichier ta.key doit rester a son emplacement d'origine dans /etc/openvpn.
+Les certificats sur le serveur OpenVpn doivent être générés avec l'option nopass. Le fichier ta.key doit rester à son emplacement d'origine dans /etc/openvpn.
 
-Le script doit etre place dans le dossier easy-rsa avec le fichier modele client.template.
+Le script doit être placé dans le dossier easy-rsa avec le fichier modèle client.template.
 
 Ce script ne fonctionne qu'avec python 3.
 
-Dans le fichier de configuration du serveur, la compression lzo doit etre activee.
+Dans le fichier de configuration du serveur, la compression lzo doit être activée.
 
 
 
@@ -25,13 +25,13 @@ Fonctionnement:
 python3 generateur_ovpn.py
 
 
-2. Repondre aux differentes questions.
+2. Répondre aux différentes questions.
 
-3. Un fichier names.csv contenant toutes les informations sera genere automatiquement puis les variables du client.template seront remplacees par les valeurs contenues dans ce fichier.
+3. Un fichier names.csv contenant toutes les informations sera generé automatiquement puis les variables du client.template seront remplacées par les valeurs contenues dans ce fichier.
 
 4. Dans le dossier easy-rsa, vous trouverez autant de fichiers clientxxx.ovpn que demande.
 
-5. Il suffira ensuite de distribuer vos fichiers de configuration .ovpn a chaque personne de votre entreprise en respectant les mesures de securite et de confidentialite, le fichier de configuration etant confidentiel et unique pour chaque personne.
+5. Il suffira ensuite de distribuer vos fichiers de configuration .ovpn a chaque personne de votre entreprise en respectant les mesures de sécurité et de confidentialité, le fichier de configuration étant confidentiel et unique pour chaque personne.
 
-6. Ce fichier doit être copie dans le dossier config de votre client OpenVpn. Une fois copie, il n'y a plus qu'e lancer la connexion.
+6. Ce fichier doit être copié dans le dossier config de votre client OpenVpn. Une fois copié, il n'y a plus qu'à lancer la connexion.
 
