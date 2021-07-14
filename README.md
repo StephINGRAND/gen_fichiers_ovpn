@@ -1,5 +1,5 @@
 # gen_fichiers_ovpn
- Générateur de fichiers clients .ovpn en masse
+ Gé©nérateur de fichiers clients .ovpn en masse
 
 
 Ce script permet de generer en masse des fichiers .ovpn pour un deploiement en urgence de connexions vpn.
@@ -33,5 +33,5 @@ python3 generateur_ovpn.py
 
 5. Il suffira ensuite de distribuer vos fichiers de configuration .ovpn a chaque personne de votre entreprise en respectant les mesures de securite et de confidentialite, le fichier de configuration etant confidentiel et unique pour chaque personne.
 
-6. Ce fichier doit �tre copie dans le dossier config de votre client OpenVpn. Une fois copie, il n'y a plus qu'e lancer la connexion.
+6. Ce fichier doit être copie dans le dossier config de votre client OpenVpn. Une fois copie, il n'y a plus qu'e lancer la connexion.
 
