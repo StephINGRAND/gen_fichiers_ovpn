@@ -35,3 +35,19 @@ python3 generateur_ovpn.py
 
 6. Ce fichier doit être copié dans le dossier config de votre client OpenVpn. Une fois copié, il n'y a plus qu'à lancer la connexion.
 
+Démarche du script:
+
+Démarrage par la fonction gen_fichier_csv:
+
+1. Le script génère un certificat et une clé client avec easy-rsa (sans mot de passe) qu'il nomme clientXXX.crt et clientXXX.key ( les XXX représentant le numéro du client ). 
+2. Les fichiers suivants ca.crt, ta.key, client XXX.crt et clientXXX.key sont lus.
+3. Des en-têtes sont créées un fichier nommé names.csv.
+4. Chaque en-tête du fichier names.csv est alimentée par l'information correspondante.
+5. Une fois le fichier names.csv rempli, 
+
+La fonction gen_fichier_ovpn se lance :
+
+6. Le fichier names.csv est lu comme un dictionnaire
+7. Les variables du fichier client.template sont remplacées par les valeurs lues dans le dictionnaire
+8. Les fichiers clientXXX.ovpn sont générés dans le dossier easy-rsa.
+ 
