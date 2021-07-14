@@ -1,12 +1,12 @@
 # Automatically generated OpenVPN client config file
-# Generated on <la_date> by <un_serveur_du_prestataire_vpn>
+# Generated on <la_date> by <admin_sys>
 # Note: this config file contains inline private keys
 #       and therefore should be kept confidential!
 # Note: this configuration is user-locked to the username below
 # OVPN_ACCESS_SERVER_USERNAME=<votre_identifiant_vpn>
 # Define the profile name of this particular configuration file
 # OVPN_ACCESS_SERVER_PROFILE=<votre_identifiant_vpn>@<serveur_vpn>
-# OVPN_ACCESS_SERVER_WSHOST=<serveur_vpn>:<port>
+# OVPN_ACCESS_SERVER_WSHOST=<serveur_vpn>:<port_srv>
 # OVPN_ACCESS_SERVER_WEB_CA_BUNDLE_START
 # -----BEGIN CERTIFICATE-----
 # <ici un certificat>
@@ -22,27 +22,20 @@ dev tun
 dev-type tun
 ns-cert-type server
 reneg-sec 86400
-auth-user-pass
 auth-retry interact
 comp-lzo yes
 verb 3
 
 <ca>
------BEGIN CERTIFICATE-----
- <ca_cert>
------END CERTIFICATE-----
+<ca_cert>
 </ca>
 
 <cert>
------BEGIN CERTIFICATE-----
- <cert_cert>
------END CERTIFICATE-----
+<cert_cert>
 </cert>
 
 <key>
------BEGIN RSA PRIVATE KEY-----
- <private_key>
------END RSA PRIVATE KEY-----
+<private_key>
 </key>
 
 key-direction 1
@@ -50,11 +43,6 @@ key-direction 1
 #
 # 2048 bit OpenVPN static key (Server Agent)
 #
------BEGIN OpenVPN Static key V1-----
- <ta_key>
------END OpenVPN Static key V1-----
+<ta_key>
 </tls-auth>
 
-# -----BEGIN RSA SIGNATURE-----
- <rsa_sign>
-# -----END RSA SIGNATURE-----
