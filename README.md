@@ -6,7 +6,7 @@ Ce script permet de générer en masse des fichiers .ovpn pour un déploiement e
 
 
 
-Préréquis:
+## Préréquis:
 
 Les certificats sur le serveur OpenVpn doivent être générés avec l'option nopass. Le fichier ta.key doit rester à son emplacement d'origine dans /etc/openvpn.
 
@@ -18,12 +18,13 @@ Dans le fichier de configuration du serveur, la compression lzo doit être activ
 
 
 
-Fonctionnement:
+## Fonctionnement:
 
 1. Lancer le script via la commande:
 
+```
 python3 generateur_ovpn.py
-
+```
 
 2. Répondre aux différentes questions.
 
@@ -35,7 +36,7 @@ python3 generateur_ovpn.py
 
 6. Ce fichier doit être copié dans le dossier config de votre client OpenVpn. Une fois copié, il n'y a plus qu'à lancer la connexion.
 
-Démarche du script:
+## Démarche du script:
 
 Démarrage par la fonction gen_fichier_csv:
 
